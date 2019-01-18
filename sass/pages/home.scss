@@ -2,6 +2,7 @@
   background-image: url("../assets/images/SG-Banner.jpg");
   background-repeat: no-repeat;
   height: 41rem;
+  background-size: cover;
 }
 .popular {
   background-color: $home-background-color;
@@ -10,9 +11,10 @@
     font-weight: bold;
   }
   &__card {
+    height: 21rem;
     &-title {
       background-color: $dark-background-color;
-      opacity: 0.7;
+      opacity: 0.8;
       color: $text-color-white;
     }
   }
@@ -29,6 +31,46 @@
       background-image: url("../assets/images/ground.jpg");
       background-repeat: no-repeat;
       height: 15rem;
+      border-bottom-left-radius: 1rem;
+      border-top-left-radius: 1rem;
     }
+  }
+  &__text {
+    &-heading {
+      font-size: $page-sub-heading;
+      font-weight: bold;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 32rem;
+      white-space: nowrap;
+    }
+  }
+  &__fees {
+    &-text {
+      color: $text-color-blue;
+      position: absolute;
+      top: 7px;
+    }
+    &-currency {
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative;
+      top: -1.7rem;
+    }
+    &-amount {
+      font-size: 4.8rem;
+      font-weight: bold;
+    }
+    &-cents {
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative;
+      top: -1.7rem;
+    }
+  }
+  &__view {
+    color: $btn-color-orange;
+    font-weight: bold;
+    font-size: 1.6rem;
   }
 }

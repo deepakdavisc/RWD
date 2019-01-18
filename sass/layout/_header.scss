@@ -1,3 +1,7 @@
-header {
-  font-size: 1.6rem;
+.header {
+  &__nav {
+    & a {
+      color: $white-background-color;
+    }
+  }
 }

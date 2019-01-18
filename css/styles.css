@@ -4,8 +4,8 @@ html {
 body {
   font-size: 1.6rem; }
 
-header {
-  font-size: 1.6rem; }
+.header__nav a {
+  color: #fff; }
 
 .footer {
   background-color: #333;
@@ -38,17 +38,20 @@ header {
 .banner {
   background-image: url("../assets/images/SG-Banner.jpg");
   background-repeat: no-repeat;
-  height: 41rem; }
+  height: 41rem;
+  background-size: cover; }
 
 .popular {
   background-color: #f7f7f7; }
   .popular__tile {
     font-size: 2.3rem;
     font-weight: bold; }
-  .popular__card-title {
-    background-color: #000;
-    opacity: 0.7;
-    color: #fff; }
+  .popular__card {
+    height: 21rem; }
+    .popular__card-title {
+      background-color: #000;
+      opacity: 0.8;
+      color: #fff; }
 
 .recommended__title {
   font-size: 2.3rem;
@@ -60,4 +63,40 @@ header {
   .recommended__card-bg {
     background-image: url("../assets/images/ground.jpg");
     background-repeat: no-repeat;
-    height: 15rem; }
+    height: 15rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem; }
+
+.recommended__text-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 32rem;
+  white-space: nowrap; }
+
+.recommended__fees-text {
+  color: #274693;
+  position: absolute;
+  top: 7px; }
+
+.recommended__fees-currency {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  top: -1.7rem; }
+
+.recommended__fees-amount {
+  font-size: 4.8rem;
+  font-weight: bold; }
+
+.recommended__fees-cents {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  top: -1.7rem; }
+
+.recommended__view {
+  color: #fb4c06;
+  font-weight: bold;
+  font-size: 1.6rem; }
