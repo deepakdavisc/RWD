@@ -4,8 +4,38 @@ html {
 body {
   font-size: 1.6rem; }
 
+.select_custom {
+  padding: 1px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../assets/images/chevron-down.png") 96%/30% no-repeat; }
+
+/* CAUTION: IE hackery ahead */
+.select_custom::-ms-expand {
+  display: none;
+  /* remove default arrow on ie10 and ie11 */ }
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width: 0\0) {
+  .select_custom {
+    background: none\9;
+    padding: 5px\9; } }
+
+.header__logo-png {
+  background-image: url("../assets/images/logo.png");
+  background-repeat: no-repeat;
+  height: 4rem;
+  width: 4rem;
+  display: inline-block; }
+
 .header__nav a {
-  color: #fff; }
+  color: #fff;
+  font-weight: bold; }
 
 .footer {
   background-color: #333;
@@ -36,9 +66,9 @@ body {
       border: none; }
 
 .banner {
-  background-image: url("../assets/images/SG-Banner.jpg");
+  background-image: url("../assets/images/ConwayBannerFallLeaves.jpg");
   background-repeat: no-repeat;
-  height: 41rem;
+  height: 58rem;
   background-size: cover; }
 
 .popular {
@@ -72,7 +102,7 @@ body {
   font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 32rem;
+  width: 100%;
   white-space: nowrap; }
 
 .recommended__fees-text {
@@ -100,3 +130,46 @@ body {
   color: #fb4c06;
   font-weight: bold;
   font-size: 1.6rem; }
+
+.recommended__rating-active {
+  background-image: url("../assets/images/star_active.png");
+  background-repeat: no-repeat;
+  height: 1.8rem;
+  width: 1.8rem;
+  display: inline-block; }
+
+.recommended__rating-not-active {
+  background-image: url("../assets/images/star_not_active.png");
+  background-repeat: no-repeat;
+  height: 1.8rem;
+  width: 1.8rem;
+  display: inline-block; }
+
+.search {
+  height: 40rem;
+  background-color: #fff;
+  border-radius: 1rem; }
+  .search__text {
+    font-weight: bold;
+    border-bottom: solid 0.1rem #ccc; }
+    .search__text-active {
+      border-bottom: solid 0.2rem #fb4c06; }
+  .search__heading {
+    font-size: 2.3rem;
+    font-weight: bold; }
+    .search__heading-textbox {
+      height: 3.9rem;
+      border-radius: 0.6rem; }
+  .search__btn-org {
+    background-color: #fb4c06;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 2.3rem;
+    width: 15rem; }
+  .search__input {
+    position: relative; }
+    .search__input-icons {
+      position: absolute;
+      top: 3.7rem;
+      left: 1rem;
+      font-size: 2rem; }

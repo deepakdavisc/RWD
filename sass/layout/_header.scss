@@ -1,7 +1,17 @@
 .header {
+  &__logo {
+    &-png {
+      background-image: url("../assets/images/logo.png");
+      background-repeat: no-repeat;
+      height: 4rem;
+      width: 4rem;
+      display: inline-block;
+    }
+  }
   &__nav {
     & a {
       color: $white-background-color;
+      font-weight: bold;
     }
   }
 }

@@ -1,7 +1,7 @@
 .banner {
-  background-image: url("../assets/images/SG-Banner.jpg");
+  background-image: url("../assets/images/ConwayBannerFallLeaves.jpg");
   background-repeat: no-repeat;
-  height: 41rem;
+  height: 58rem;
   background-size: cover;
 }
 .popular {
@@ -41,7 +41,7 @@
       font-weight: bold;
       overflow: hidden;
       text-overflow: ellipsis;
-      width: 32rem;
+      width: 100%;
       white-space: nowrap;
     }
   }
@@ -72,5 +72,60 @@
     color: $btn-color-orange;
     font-weight: bold;
     font-size: 1.6rem;
+  }
+  &__rating {
+    &-active {
+      background-image: url("../assets/images/star_active.png");
+      background-repeat: no-repeat;
+      height: 1.8rem;
+      width: 1.8rem;
+      display: inline-block;
+    }
+    &-not-active {
+      background-image: url("../assets/images/star_not_active.png");
+      background-repeat: no-repeat;
+      height: 1.8rem;
+      width: 1.8rem;
+      display: inline-block;
+    }
+  }
+}
+
+.search {
+  height: 40rem;
+  background-color: $white-background-color;
+  border-radius: 1rem;
+  &__text {
+    font-weight: bold;
+    border-bottom: solid 0.1rem $grey-background-color;
+    &-active {
+      border-bottom: solid 0.2rem $btn-color-orange;
+    }
+  }
+  &__heading {
+    font-size: $page-heading;
+    font-weight: bold;
+    &-textbox {
+      height: 3.9rem;
+      border-radius: 0.6rem;
+    }
+  }
+  &__btn {
+    &-org {
+      background-color: $btn-color-orange;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 2.3rem;
+      width: 15rem;
+    }
+  }
+  &__input {
+    position: relative;
+    &-icons {
+      position: absolute;
+      top: 3.7rem;
+      left: 1rem;
+      font-size: 2rem;
+    }
   }
 }
