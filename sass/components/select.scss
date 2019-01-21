@@ -1,24 +1,63 @@
-.select_custom {
-  padding: 1px 35px 5px 5px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  height: 34px;
-  border-radius: 2px;
-  -webkit-appearance: none;
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.custom-dropdown select {
+  font-size: inherit;
+  padding: 0.5rem;
+  padding-right: 2.5rem;
+  border: solid 0.1rem #ccc;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: "";
+  /*Hiding the select arrow for firefox*/
   -moz-appearance: none;
+  /*Hiding the select arrow for chrome*/
+  -webkit-appearance: none;
+  /*Hiding the select arrow default implementation*/
   appearance: none;
-  background: url("../assets/images/chevron-down.png") 96% / 30% no-repeat;
+}
+/*Hiding the select arrow for IE10*/
+.custom-dropdown select::-ms-expand {
+  display: none;
 }
 
-/* CAUTION: IE hackery ahead */
-.select_custom::-ms-expand {
-  display: none; /* remove default arrow on ie10 and ie11 */
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
 }
 
-/* target Internet Explorer 9 to undo the custom arrow */
-@media screen and (min-width: 0\0) {
-  .select_custom {
-    background: none\9;
-    padding: 5px\9;
-  }
+.custom-dropdown::after {
+  /*  Custom dropdown arrow */
+  content: "\f078";
+  font: normal normal normal 14px/1 FontAwesome;
+  height: 1em;
+  font-size: 0.625em;
+  line-height: 1;
+  right: 0.8rem;
+  top: 50%;
+  margin-top: -0.5em;
+}
+
+.custom-dropdown::before {
+  /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.custom-dropdown::after {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0, 0, 0, 0.25);
 }

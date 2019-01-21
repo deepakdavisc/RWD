@@ -4,27 +4,62 @@ html {
 body {
   font-size: 1.6rem; }
 
-.select_custom {
-  padding: 1px 35px 5px 5px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  height: 34px;
-  border-radius: 2px;
-  -webkit-appearance: none;
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; }
+
+.custom-dropdown select {
+  font-size: inherit;
+  padding: 0.5rem;
+  padding-right: 2.5rem;
+  border: solid 0.1rem #ccc;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: "";
+  /*Hiding the select arrow for firefox*/
   -moz-appearance: none;
-  appearance: none;
-  background: url("../assets/images/chevron-down.png") 96%/30% no-repeat; }
+  /*Hiding the select arrow for chrome*/
+  -webkit-appearance: none;
+  /*Hiding the select arrow default implementation*/
+  appearance: none; }
 
-/* CAUTION: IE hackery ahead */
-.select_custom::-ms-expand {
-  display: none;
-  /* remove default arrow on ie10 and ie11 */ }
+/*Hiding the select arrow for IE10*/
+.custom-dropdown select::-ms-expand {
+  display: none; }
 
-/* target Internet Explorer 9 to undo the custom arrow */
-@media screen and (min-width: 0\0) {
-  .select_custom {
-    background: none\9;
-    padding: 5px\9; } }
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none; }
+
+.custom-dropdown::after {
+  /*  Custom dropdown arrow */
+  content: "\f078";
+  font: normal normal normal 14px/1 FontAwesome;
+  height: 1em;
+  font-size: 0.625em;
+  line-height: 1;
+  right: 0.8rem;
+  top: 50%;
+  margin-top: -0.5em; }
+
+.custom-dropdown::before {
+  /*  Custom dropdown arrow cover */
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0; }
+
+.custom-dropdown::after {
+  color: rgba(0, 0, 0, 0.6); }
+
+.custom-dropdown select[disabled] {
+  color: rgba(0, 0, 0, 0.25); }
 
 .header__logo-png {
   background-image: url("../assets/images/logo.png");
@@ -105,26 +140,28 @@ body {
   width: 100%;
   white-space: nowrap; }
 
-.recommended__fees-text {
-  color: #274693;
-  position: absolute;
-  top: 7px; }
-
-.recommended__fees-currency {
-  font-size: 2rem;
-  font-weight: bold;
-  position: relative;
-  top: -1.7rem; }
-
-.recommended__fees-amount {
-  font-size: 4.8rem;
-  font-weight: bold; }
-
-.recommended__fees-cents {
-  font-size: 2rem;
-  font-weight: bold;
-  position: relative;
-  top: -1.7rem; }
+.recommended__fees {
+  position: relative; }
+  .recommended__fees-text {
+    color: #274693;
+    position: absolute;
+    top: -0.7rem;
+    width: 11rem; }
+  .recommended__fees-currency {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    top: -1.7rem;
+    left: 0.5rem; }
+  .recommended__fees-amount {
+    font-size: 4.8rem;
+    font-weight: bold; }
+  .recommended__fees-cents {
+    font-size: 2rem;
+    font-weight: bold;
+    top: 1.3rem;
+    position: absolute;
+    left: 7.1rem; }
 
 .recommended__view {
   color: #fb4c06;
