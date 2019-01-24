@@ -13,5 +13,11 @@
       color: $white-background-color;
       font-weight: bold;
     }
+    &-b {
+      & a {
+        color: $dark-background-color;
+        font-weight: bold;
+      }
+    }
   }
 }

@@ -1,0 +1,32 @@
+.search-b {
+  background-color: $footer-search-bg-color;
+  &__input {
+    position: relative;
+    &-lg {
+      width: 30rem;
+    }
+    &-md {
+      width: 20rem;
+    }
+    &-sm {
+      width: 15rem;
+    }
+    &-textbox {
+      font-size: 1.4rem;
+      height: 3.9rem;
+      border-radius: 0.6rem;
+    }
+    &-icons {
+      position: absolute;
+      top: 3.7rem;
+      left: 1rem;
+      font-size: 2rem;
+    }
+    &-icontextbox {
+      padding-left: 3.4rem;
+    }
+    &-text {
+      color: $white-background-color;
+    }
+  }
+}

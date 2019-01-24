@@ -34,7 +34,8 @@ body {
 .custom-dropdown {
   position: relative;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: 100%; }
 
 .custom-dropdown select {
   font-size: inherit;
@@ -45,6 +46,7 @@ body {
   border-radius: 3px;
   text-indent: 0.01px;
   text-overflow: "";
+  width: 100%;
   /*Hiding the select arrow for firefox*/
   -moz-appearance: none;
   /*Hiding the select arrow for chrome*/
@@ -87,6 +89,30 @@ body {
 .custom-dropdown select[disabled] {
   color: rgba(0, 0, 0, 0.25); }
 
+.search-b {
+  background-color: #0a1245; }
+  .search-b__input {
+    position: relative; }
+    .search-b__input-lg {
+      width: 30rem; }
+    .search-b__input-md {
+      width: 20rem; }
+    .search-b__input-sm {
+      width: 15rem; }
+    .search-b__input-textbox {
+      font-size: 1.4rem;
+      height: 3.9rem;
+      border-radius: 0.6rem; }
+    .search-b__input-icons {
+      position: absolute;
+      top: 3.7rem;
+      left: 1rem;
+      font-size: 2rem; }
+    .search-b__input-icontextbox {
+      padding-left: 3.4rem; }
+    .search-b__input-text {
+      color: #fff; }
+
 .header__logo-png {
   background-image: url("../assets/images/logo.png");
   background-repeat: no-repeat;
@@ -96,6 +122,10 @@ body {
 
 .header__nav a {
   color: #fff;
+  font-weight: bold; }
+
+.header__nav-b a {
+  color: #000;
   font-weight: bold; }
 
 .footer {
@@ -211,7 +241,12 @@ body {
 .search {
   height: 40rem;
   background-color: #fff;
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  width: 60rem; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      height: auto;
+      width: 100%; } }
   .search__text {
     font-weight: bold;
     border-bottom: solid 0.1rem #ccc; }

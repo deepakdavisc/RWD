@@ -3,6 +3,7 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  width: 100%;
 }
 
 .custom-dropdown select {
@@ -14,6 +15,7 @@
   border-radius: 3px;
   text-indent: 0.01px;
   text-overflow: "";
+  width: 100%;
   /*Hiding the select arrow for firefox*/
   -moz-appearance: none;
   /*Hiding the select arrow for chrome*/
