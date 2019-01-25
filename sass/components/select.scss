@@ -4,13 +4,16 @@
   display: inline-block;
   vertical-align: middle;
   width: 100%;
+  &-calender {
+    padding-left: 3rem !important;
+  }
 }
 
 .custom-dropdown select {
   font-size: inherit;
-  padding: 0.5rem;
-  padding-right: 2.5rem;
-  border: solid 0.1rem #ccc;
+  padding: 0.35rem;
+  padding-right: 2.1rem;
+  border: solid 0.1rem $grey-background-color;
   margin: 0;
   border-radius: 3px;
   text-indent: 0.01px;

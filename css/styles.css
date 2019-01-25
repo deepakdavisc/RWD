@@ -14,13 +14,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 36em) {
     html {
       font-size: 50%; } }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 47.94em) {
     html {
       font-size: 50%; } }
   @media only screen and (min-width: 112.5em) {
@@ -36,12 +36,14 @@ body {
   display: inline-block;
   vertical-align: middle;
   width: 100%; }
+  .custom-dropdown-calender {
+    padding-left: 3rem !important; }
 
 .custom-dropdown select {
   font-size: inherit;
-  padding: 0.5rem;
-  padding-right: 2.5rem;
-  border: solid 0.1rem #ccc;
+  padding: 0.35rem;
+  padding-right: 2.1rem;
+  border: solid 0.1rem #b7b7b7;
   margin: 0;
   border-radius: 3px;
   text-indent: 0.01px;
@@ -116,8 +118,8 @@ body {
 .header__logo-png {
   background-image: url("../assets/images/logo.png");
   background-repeat: no-repeat;
-  height: 4rem;
-  width: 4rem;
+  height: 4.8rem;
+  width: 5.2rem;
   display: inline-block; }
 
 .header__nav a {
@@ -131,36 +133,99 @@ body {
 .footer {
   background-color: #333;
   color: #fff;
-  font-size: 1.3rem; }
+  font-size: 1.5rem; }
   .footer__list {
+    padding-left: 0;
     list-style: none; }
     .footer__list li {
       padding: 0.7rem; }
       .footer__list li:first-child {
         font-weight: bold; }
+    @media only screen and (max-width: 36em) {
+      .footer__list {
+        display: none; }
+        .footer__list li:first-child {
+          font-weight: normal; } }
+  .footer__copyright {
+    border-top: solid 1px #b7b7b7; }
+  .footer__xsheading {
+    cursor: pointer;
+    border-bottom: solid 1px #f7f7f7; }
+    .footer__xsheading.collapsed::after {
+      font: normal normal normal 14px/1 FontAwesome;
+      content: "\f078";
+      position: absolute;
+      right: 20px; }
+    .footer__xsheading::after {
+      font: normal normal normal 14px/1 FontAwesome;
+      content: "\f077";
+      position: absolute;
+      right: 20px; }
 
 .footer-search {
-  background-color: #0a1245;
-  color: #fff; }
+  background-color: #f7f7f7;
+  color: #000;
+  border-top: solid 1px #b7b7b7; }
   .footer-search__text {
     font-size: 2.5rem; }
   .footer-search__textbox {
-    border: none;
+    border: solid 1px #b7b7b7;
     border-radius: 0.5rem;
     padding: 1.3rem;
     font-size: 1.6rem; }
   .footer-search__btn {
     font-size: 1.6rem;
-    padding: 1.2rem; }
+    font-weight: bold;
+    padding: 1.2rem;
+    color: #fff; }
+    .footer-search__btn:hover {
+      opacity: .7; }
     .footer-search__btn-org {
       background-color: #fb4c06;
       border: none; }
+
+@media only screen and (max-width: 36em) {
+  .navmenu {
+    display: none;
+    background-color: white;
+    position: absolute;
+    height: 12rem;
+    top: 6rem;
+    right: 1.9rem;
+    z-index: 1;
+    width: 18rem; } }
+
+.navmenu__item {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.6rem 2rem; }
+  @media only screen and (max-width: 47.94em) {
+    .navmenu__item {
+      padding: 0.8rem 2rem;
+      color: #000; } }
+
+.hamburger {
+  color: #fff; }
+  .hamburger__icon.collapsed::before {
+    content: "\f0c9";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em; }
+  .hamburger__icon::before {
+    content: "\f00d";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em; }
 
 .banner {
   background-image: url("../assets/images/ConwayBannerFallLeaves.jpg");
   background-repeat: no-repeat;
   height: 58rem;
   background-size: cover; }
+  @media only screen and (max-width: 47.94em) {
+    .banner {
+      height: auto;
+      padding-bottom: 3rem; } }
 
 .popular {
   background-color: #f7f7f7; }
@@ -227,47 +292,60 @@ body {
 .recommended__rating-active {
   background-image: url("../assets/images/star_active.png");
   background-repeat: no-repeat;
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 2.2rem;
+  width: 2rem;
   display: inline-block; }
 
 .recommended__rating-not-active {
   background-image: url("../assets/images/star_not_active.png");
   background-repeat: no-repeat;
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 2.2rem;
+  width: 2rem;
   display: inline-block; }
 
 .search {
   height: 40rem;
   background-color: #fff;
   border-radius: 1rem;
-  width: 60rem; }
-  @media only screen and (max-width: 37.5em) {
+  width: 53rem; }
+  @media only screen and (max-width: 47.94em) {
     .search {
       height: auto;
       width: 100%; } }
   .search__text {
+    font-size: 2.3rem;
     font-weight: bold;
-    border-bottom: solid 0.1rem #ccc; }
+    border-bottom: solid 0.1rem #b7b7b7; }
     .search__text-active {
       border-bottom: solid 0.2rem #fb4c06; }
   .search__heading {
     font-size: 2.3rem;
     font-weight: bold; }
     .search__heading-textbox {
-      height: 3.9rem;
-      border-radius: 0.6rem; }
+      height: 3.3rem;
+      border-radius: 0.6rem;
+      padding-left: 3.7rem;
+      font-size: 1.6rem; }
   .search__btn-org {
     background-color: #fb4c06;
     border: none;
     border-radius: 0.5rem;
-    font-size: 2.3rem;
-    width: 15rem; }
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 15rem;
+    color: #fff; }
+  .search__btn:hover {
+    opacity: 0.7 !important; }
   .search__input {
     position: relative; }
     .search__input-icons {
       position: absolute;
-      top: 3.7rem;
+      top: 3.3rem;
       left: 1rem;
       font-size: 2rem; }
+    .search__input-calender {
+      position: absolute;
+      top: 3.3rem;
+      left: 2.2rem;
+      font-size: 2rem;
+      z-index: 1; }

@@ -1,193 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!--<link rel="stylesheet" href="css/icon-font.css">-->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="css/styles.css" />
+  <!--<link rel="stylesheet" href="css/icon-font.css">-->
 
-    <title>Supreme Golf</title>
-  </head>
+  <link rel="stylesheet" href="css/styles.css" />
 
-  <body>
-    <header class="header">
+  <title>Supreme Golf</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row justify-content-center align-items-center p-3 px-md-4 mb-3 ">
+        <div class="col header__logo">
+          <span class="header__logo-png align-middle"></span>
+        </div>
+        <div class="col">
+          <nav class="header__nav navbar navbar-expand-lg float-right">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse header__nav-b" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active mr-5">
+                  <a class="nav-link" href="#">My SG <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="#">Explore</a>
+                </li>
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="#">Dallas | 22&#8451;</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="search-b">
       <div class="container">
-        <div
-          class="row justify-content-center align-items-center p-3 px-md-4 mb-3 "
-        >
-          <div class="col header__logo">
-            <span class="header__logo-png align-middle"></span>
+        <div class="py-5 flex-column flex-sm-row d-flex justify-content-sm-around">
+          <div class="search-b__input search-b__input-lg">
+            <span class="d-block mb-1 search-b__input-text">Location</span>
+            <i class="fa fa-search search-b__input-icons" aria-hidden="true"></i>
+            <input type="text" class="form-control search-b__input-textbox search-b__input-icontextbox" id="firstName"
+              placeholder="" value="" required="" />
           </div>
-          <div class="col">
-            <nav class="header__nav navbar navbar-expand-lg float-right">
-              <button
-                class="navbar-toggler collapsed"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div
-                class="navbar-collapse collapse header__nav-b"
-                id="navbarSupportedContent"
-              >
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active mr-5">
-                    <a class="nav-link" href="#"
-                      >My SG <span class="sr-only">(current)</span></a
-                    >
-                  </li>
-                  <li class="nav-item mr-5">
-                    <a class="nav-link" href="#">Explore</a>
-                  </li>
-                  <li class="nav-item mr-5">
-                    <a class="nav-link" href="#">Dallas | 22&#8451;</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+          <div class="search-b__input search-b__input-md">
+            <span class="d-block mb-1 search-b__input-text">Date</span>
+            <i class="fa fa-calendar-o search-b__input-icons" aria-hidden="true"></i>
+            <input type="text" class="form-control search-b__input-textbox search-b__input-icontextbox" id="firstName"
+              placeholder="" value="" required="" />
+          </div>
+          <div class="search-b__input search-b__input-md">
+            <span class="d-block mb-1 search-b__input-text">Time</span>
+            <input type="text" class="form-control search-b__input-textbox search-b__input-icontextbox" id="firstName"
+              placeholder="" value="" required="" />
+          </div>
+          <div class="search-b__input search-b__input-sm">
+            <span class="d-block mb-1 search-b__input-text">Players</span>
+            <input type="text" class="form-control search-b__input-textbox search-b__input-textbox" id="firstName"
+              placeholder="" value="" required="" />
+          </div>
+          <div class="search-b__input search-b__input-sm">
+            <span class="d-block mb-1 search-b__input-text">Holes</span>
+            <input type="text" class="form-control search-b__input-textbox search-b__input-textbox" id="firstName"
+              placeholder="" value="" required="" />
           </div>
         </div>
       </div>
-      <div class="search-b">
-        <div class="container">
-            <div class="py-5 flex-column flex-sm-row d-flex justify-content-sm-around">
-              <div class="search-b__input search-b__input-lg">
-                <span class="d-block mb-1 search-b__input-text">Location</span>
-                <i
-                  class="fa fa-search search-b__input-icons"
-                  aria-hidden="true"
-                ></i>
-                <input
-                  type="text"
-                  class="form-control search-b__input-textbox search-b__input-icontextbox"
-                  id="firstName"
-                  placeholder=""
-                  value=""
-                  required=""
-                />
-              </div>
-              <div class="search-b__input search-b__input-md">
-                <span class="d-block mb-1 search-b__input-text">Date</span>
-                <i
-                  class="fa fa-calendar-o search-b__input-icons"
-                  aria-hidden="true"
-                ></i>
-                <input
-                  type="text"
-                  class="form-control search-b__input-textbox search-b__input-icontextbox"
-                  id="firstName"
-                  placeholder=""
-                  value=""
-                  required=""
-                />
-              </div>
-              <div class="search-b__input search-b__input-md">
-                <span class="d-block mb-1 search-b__input-text">Time</span>
-                <input
-                  type="text"
-                  class="form-control search-b__input-textbox search-b__input-icontextbox"
-                  id="firstName"
-                  placeholder=""
-                  value=""
-                  required=""
-                />
-              </div>
-              <div class="search-b__input search-b__input-sm">
-                <span class="d-block mb-1 search-b__input-text">Players</span>
-                <input
-                  type="text"
-                  class="form-control search-b__input-textbox search-b__input-textbox"
-                  id="firstName"
-                  placeholder=""
-                  value=""
-                  required=""
-                />
-              </div>
-              <div class="search-b__input search-b__input-sm">
-                <span class="d-block mb-1 search-b__input-text">Holes</span>
-                <input
-                  type="text"
-                  class="form-control search-b__input-textbox search-b__input-textbox"
-                  id="firstName"
-                  placeholder=""
-                  value=""
-                  required=""
-                />
-              </div>
-            </div>
-          </div>
-      </div>
-      
-    </header>
+    </div>
 
-    <footer class="footer">
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md">
-                <ul class="footer__list">
-                  <li>Supreme Golf</li>
-                  <li>Home</li>
-                  <li>About</li>
-                  <li>Blog</li>
-                  <li>FAQ</li>
-                </ul>
-              </div>
-              <div class="col-md">
-                <ul class="footer__list">
-                  <li>Contact</li>
-                  <li>Support</li>
-                  <li>Feedback</li>
-                </ul>
-              </div>
-              <div class="col-md">
-                <ul class="footer__list">
-                  <li>Legal</li>
-                  <li>Terms</li>
-                  <li>Privacy</li>
-                  <li>Accessibility</li>
-                  <li>Disclaimer</li>
-                </ul>
-              </div>
-              <div class="col-md">
-                <ul class="footer__list">
-                  <li>Operators</li>
-                  <li>Partners</li>
-                  <li>Owners</li>
-                </ul>
-              </div>
+  </header>
+
+  <footer class="footer">
+    <div class="container pt-5">
+      <div class="row mb-3">
+        <div class="col-md-7">
+          <div class="d-flex flex-column flex-sm-row justify-content-start justify-content-sm-between">
+            <div>
+              <h3 data-toggle="collapse" href="#SupremeGolf" class="collapsed py-4 footer__xsheading d-block d-sm-none">Supreme
+                Golf</h3>
+              <ul id="SupremeGolf" class="footer__list d-sm-block">
+                <li>Supreme Golf</li>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>FAQ</li>
+              </ul>
+            </div>
+            <div>
+              <h3 data-toggle="collapse" href="#SupremeGolfConatct" class="collapsed py-4 footer__xsheading d-block d-sm-none">Contact</h3>
+              <ul id="SupremeGolfConatct" class="footer__list d-sm-block">
+                <li>Contact</li>
+                <li>Support</li>
+                <li>Feedback</li>
+              </ul>
+            </div>
+            <div>
+              <h3 data-toggle="collapse" href="#SupremeGolfLegal" class="collapsed py-4 footer__xsheading d-block d-sm-none">Legal</h3>
+              <ul id="SupremeGolfLegal" class="footer__list d-sm-block">
+                <li>Legal</li>
+                <li>Terms</li>
+                <li>Privacy</li>
+                <li>Accessibility</li>
+                <li>Disclaimer</li>
+              </ul>
+            </div>
+            <div>
+              <h3 data-toggle="collapse" href="#SupremeGolfOperators" class="collapsed py-4 footer__xsheading d-block d-sm-none">Operators</h3>
+              <ul id="SupremeGolfOperators" class="footer__list d-sm-block">
+                <li>Operators</li>
+                <li>Partners</li>
+                <li>Owners</li>
+              </ul>
             </div>
           </div>
-          <div class="col-md">Footer Icons</div>
+        </div>
+        <div class="pl-5 col-md">
+          <div class="d-flex justify-content-center justify-content-md-start mb-5">
+            <div class="p-2"><img class="img-fluid" src="./assets/images/apple-badge-img.png" alt=""></div>
+            <div class="p-2"><img class="img-fluid" src="./assets/images/google-badge-img.png" alt=""></div>
+          </div>
+          <div class="d-flex justify-content-center justify-content-md-start mb-4 mb-md-0">
+            <div class="px-4"><img class="img-fluid" src="./assets/images/facebook_2.png" alt=""></div>
+            <div class="px-4"><img class="img-fluid" src="./assets/images/twitter_2.png" alt=""></div>
+            <div class="px-4"><img class="img-fluid" src="./assets/images/instagram_2.png" alt=""></div>
+          </div>
         </div>
       </div>
-    </footer>
-  </body>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script type="text/javascript"></script>
+      <div class="footer__copyright py-4 d-flex">
+        &copy; 2011-2018 Supreme Golf. All rights are reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript"></script>
+
 </html>

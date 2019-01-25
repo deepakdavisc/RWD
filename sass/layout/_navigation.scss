@@ -1,0 +1,39 @@
+.navmenu {
+  @include respond(phone) {
+    display: none;
+    background-color: white;
+    position: absolute;
+    height: 12rem;
+    top: 6rem;
+    right: 1.9rem;
+    z-index: 1;
+    width: 18rem;
+  }
+  &__item {
+    color: $white-background-color;
+    font-weight: bold;
+    padding: 0.6rem 2rem;
+
+    @include respond(tab-port) {
+      padding: 0.8rem 2rem;
+      color: $dark-background-color;
+    }
+  }
+}
+.hamburger {
+  color: $white-background-color;
+  &__icon {
+    &.collapsed::before {
+      content: "\f0c9";
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: 2em;
+    }
+    &::before {
+      content: "\f00d";
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: 2em;
+    }
+  }
+}

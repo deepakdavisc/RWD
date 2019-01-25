@@ -1,32 +1,82 @@
 .footer {
   background-color: $footer-background-color;
   color: $text-color-white;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+
   &__list {
+    padding-left: 0;
     list-style: none;
+
     & li {
       padding: 0.7rem;
+
       &:first-child {
         font-weight: bold;
       }
     }
+
+    @include respond(phone) {
+      display: none;
+
+      & li {
+        &:first-child {
+          font-weight: normal;
+        }
+      }
+
+    }
+  }
+
+  &__copyright {
+    border-top: solid 1px $grey-background-color;
+  }
+
+  &__xsheading {
+    cursor: pointer;
+    border-bottom: solid 1px $home-background-color;
+
+    &.collapsed::after {
+      font: normal normal normal 14px/1 FontAwesome;
+      content: "\f078";
+      position: absolute;
+      right: 20px;
+    }
+
+    &::after {
+      font: normal normal normal 14px/1 FontAwesome;
+      content: "\f077";
+      position: absolute;
+      right: 20px;
+    }
   }
 }
+
 .footer-search {
-  background-color: $footer-search-bg-color;
-  color: $text-color-white;
+  background-color: $home-background-color;
+  color: $dark-background-color;
+  border-top: solid 1px $grey-background-color;
+
   &__text {
     font-size: 2.5rem;
   }
+
   &__textbox {
-    border: none;
+    border: solid 1px $grey-background-color;
     border-radius: 0.5rem;
     padding: 1.3rem;
     font-size: 1.6rem;
   }
+
   &__btn {
     font-size: 1.6rem;
+    font-weight: bold;
     padding: 1.2rem;
+    color: $white-background-color;
+
+    &:hover {
+      opacity: .7;
+    }
+
     &-org {
       background-color: $btn-color-orange;
       border: none;
